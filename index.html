@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css"
+    />
+    <title>Muhammad Zahid Azmy</title>
+  </head>
+  <body class="bg-black text-white font-sans">
+    <nav class="flex justify-center h-[80px] sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md">
+      <div class="w-full max-w-screen-xl flex items-center justify-between px-4">
+        <a href="#" class="text-2xl font-bold" data-text="ZAHID">ZAHID</a>
+        <button
+          id="menu-btn"
+          class="md:hidden focus:outline-none hover:text-green-400 transition"
+        >
+          <svg
+            class="w-8 h-8"
+            fill="none"
+            stroke="currentColor"
+            stroke-width="2"
+            viewBox="0 0 24 24"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M4 6h16M4 12h16M4 18h16"
+            />
+          </svg>
+        </button>
+        <div
+          id="menu"
+          class="hidden absolute top-[80px] left-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-40 flex-col items-start space-y-4 px-6 py-6 md:static md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 md:w-auto md:p-0"
+        >
+          <a href="#" class="hover:text-green-400 transition relative group">
+            Home
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#skills" class="hover:text-green-400 transition relative group">
+            Skills
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#projects" class="hover:text-green-400 transition relative group">
+            Projects
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+          <a href="#bugbounty" class="hover:text-green-400 transition relative group">
+            Bug Bounty
+            <span class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"></span>
+          </a>
+        </div>
+      </div>
+    </nav>
+
+    <div class="grid grid-cols-1 md:grid-cols-2 p-5 m-5 mx-auto gap-8 max-w-screen-xl">
+      <div>
+        <img src="image/me.png" alt="Zahid Azmy" class="object-cover w-full rounded-lg" />
+      </div>
+
+      <div class="flex flex-col">
+        <h2 class="text-2xl font-bold mb-2">MUHAMMAD ZAHID AZMY</h2>
+
+        <p class="mb-1"><i class="fa-solid fa-phone mr-2"></i>+6282351437523</p>
+        <p class="mb-4"><i class="fa-solid fa-envelope mr-2"></i>zahidazmy13@gmail.com</p>
+
+        <hr class="border-t border-gray-500 w-full mb-5" />
+
+        <h2 class="font-bold text-xl mb-1">Profile Summary</h2>
+        <p class="mb-5">
+          Seorang fresh graduate Teknik Komputer Jaringan dengan ketertarikan
+          dalam Cyber Security. Memiliki kemampuan kuat dalam Linux & Problem Solving.
+        </p>
+
+        <h2 class="font-bold text-xl mb-1">Education</h2>
+        <p class="mb-5">SMK Negeri 1 Tenggarong</p>
+
+        <h2 id="projects" class="font-bold text-xl mb-2">Projects</h2>
+        <ul class="list-disc list-inside mb-5">
+          <li>NFC Reader with keyboard emulator</li>
+          <li>AI Assistant with LLAMA Model</li>
+          <li>Attendance Data Scrapper</li>
+          <li>Whatsapp Notification System Using Laravel</li>
+        </ul>
+
+        <h2 id="skills" class="font-bold text-xl mb-2">Skills</h2>
+        <div class="mb-5">
+          <div class="mb-4">
+            <h3 class="font-semibold mb-1">Server</h3>
+            <ul class="list-none list-inside ml-4">
+              <li>Linux</li>
+              <li>Windows</li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="font-semibold mb-1">Networking</h3>
+            <ul class="list-none list-inside ml-4">
+              <li>Mikrotik</li>
+              <li>Cisco</li>
+            </ul>
+          </div>
+          <div class="mb-4">
+            <h3 class="font-semibold mb-1">Programming</h3>
+            <ul class="list-none list-inside ml-4">
+              <li>Python</li>
+              <li>Bash</li>
+              <li>Powershell</li>
+              <li>Batch</li>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>Javascript</li>
+            </ul>
+          </div>
+        </div>
+
+        <h2 class="font-bold text-xl mb-2">Certifications</h2>
+        <ul class="list-none list-inside ml-4 mb-4">
+          <li>MTCNA</li>
+          <li>Bug Discovery Award - Banyuwangi</li>
+          <li>1st Place, Provincial Cyber Security LKS</li>
+          <li>3rd Place, Provincial IT Network System Administration LKS</li>
+        </ul>
+      </div>
+    </div>
+
+    <script>
+      const menuBtn = document.getElementById("menu-btn");
+      const menu = document.getElementById("menu");
+      menuBtn.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
+    </script>
+  </body>
+</html>
