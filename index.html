@@ -19,7 +19,9 @@
       }
     </style>
   </head>
-  <body class="bg-black text-white font-sans">
+  <body
+    class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white font-sans leading-relaxed tracking-wide"
+  >
     <nav
       class="flex justify-center h-[80px] sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md"
     >
@@ -34,11 +36,27 @@
             class="focus:outline-none text-green-400 hover:text-green-600 transition-colors duration-300"
             title="Toggle dark/light mode"
           >
-            <svg id="theme-toggle-dark-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M17.293 13.293a8 8 0 01-11.586-11.586 8 8 0 0011.586 11.586z"></path>
+            <svg
+              id="theme-toggle-dark-icon"
+              class="w-6 h-6 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M17.293 13.293a8 8 0 01-11.586-11.586 8 8 0 0011.586 11.586z"
+              ></path>
             </svg>
-            <svg id="theme-toggle-light-icon" class="w-6 h-6 hidden" fill="currentColor" viewBox="0 0 20 20" xmlns="http://www.w3.org/2000/svg">
-              <path d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 0l.7.7a1 1 0 11-1.42 1.42l-.7-.7a1 1 0 010-1.42zM18 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-1.78 4.22a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.78a1 1 0 010-1.42l.7-.7a1 1 0 111.42 1.42l-.7.7a1 1 0 01-1.42 0zM4 10a1 1 0 110-2H3a1 1 0 110 2h1zm1.78-4.22a1 1 0 011.42-1.42l.7.7a1 1 0 11-1.42 1.42l-.7-.7z"></path>
+            <svg
+              id="theme-toggle-light-icon"
+              class="w-6 h-6 hidden"
+              fill="currentColor"
+              viewBox="0 0 20 20"
+              xmlns="http://www.w3.org/2000/svg"
+            >
+              <path
+                d="M10 2a1 1 0 011 1v1a1 1 0 11-2 0V3a1 1 0 011-1zm4.22 1.78a1 1 0 011.42 0l.7.7a1 1 0 11-1.42 1.42l-.7-.7a1 1 0 010-1.42zM18 10a1 1 0 110 2h-1a1 1 0 110-2h1zm-1.78 4.22a1 1 0 010 1.42l-.7.7a1 1 0 11-1.42-1.42l.7-.7a1 1 0 011.42 0zM10 16a1 1 0 011 1v1a1 1 0 11-2 0v-1a1 1 0 011-1zm-4.22-1.78a1 1 0 010-1.42l.7-.7a1 1 0 111.42 1.42l-.7.7a1 1 0 01-1.42 0zM4 10a1 1 0 110-2H3a1 1 0 110 2h1zm1.78-4.22a1 1 0 011.42-1.42l.7.7a1 1 0 11-1.42 1.42l-.7-.7z"
+              ></path>
             </svg>
           </button>
           <button
@@ -224,6 +242,33 @@
       const menu = document.getElementById("menu");
       menuBtn.addEventListener("click", () => {
         menu.classList.toggle("hidden");
+      });
+
+      // Dark/Light mode toggle
+      const themeToggleBtn = document.getElementById("theme-toggle");
+      const darkIcon = document.getElementById("theme-toggle-dark-icon");
+      const lightIcon = document.getElementById("theme-toggle-light-icon");
+
+      // Check stored theme preference and apply it
+      if (localStorage.getItem("theme") === "light") {
+        document.documentElement.classList.remove("dark");
+        lightIcon.classList.remove("hidden");
+      } else {
+        document.documentElement.classList.add("dark");
+        darkIcon.classList.remove("hidden");
+      }
+
+      themeToggleBtn.addEventListener("click", () => {
+        darkIcon.classList.toggle("hidden");
+        lightIcon.classList.toggle("hidden");
+
+        if (document.documentElement.classList.contains("dark")) {
+          document.documentElement.classList.remove("dark");
+          localStorage.setItem("theme", "light");
+        } else {
+          document.documentElement.classList.add("dark");
+          localStorage.setItem("theme", "dark");
+        }
       });
     </script>
   </body>
