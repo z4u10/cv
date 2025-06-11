@@ -19,17 +19,18 @@
       }
     </style>
   </head>
-  <body class="bg-black text-white font-sans">
+  <body class="bg-gradient-to-br from-gray-900 via-black to-gray-900 text-white font-sans leading-relaxed tracking-wide">
     <nav
-      class="flex justify-center h-[80px] sticky top-0 z-50 bg-black bg-opacity-80 backdrop-blur-md"
+      class="flex justify-center h-[80px] sticky top-0 z-50 bg-black bg-opacity-90 backdrop-blur-md shadow-lg"
     >
       <div
-        class="w-full max-w-screen-xl flex items-center justify-between px-4"
+        class="w-full max-w-screen-xl flex items-center justify-between px-6 md:px-8"
       >
-        <a href="#" class="text-2xl font-bold" data-text="ZAHID">ZAHID</a>
+        <a href="#" class="text-3xl font-extrabold tracking-widest text-green-400" data-text="ZAHID">ZAHID</a>
         <button
           id="menu-btn"
-          class="md:hidden focus:outline-none hover:text-green-400 transition"
+          class="md:hidden focus:outline-none hover:text-green-500 transition-colors duration-300"
+          aria-label="Toggle menu"
         >
           <svg
             class="w-8 h-8"
@@ -47,161 +48,147 @@
         </button>
         <div
           id="menu"
-          class="hidden absolute top-[80px] left-0 w-full bg-black bg-opacity-80 backdrop-blur-md z-40 flex-col items-start space-y-4 px-6 py-6 md:static md:flex md:flex-row md:items-center md:space-y-0 md:space-x-8 md:w-auto md:p-0"
+          class="hidden absolute top-[80px] left-0 w-full bg-black bg-opacity-90 backdrop-blur-md z-40 flex-col items-start space-y-4 px-6 py-6 md:static md:flex md:flex-row md:items-center md:space-y-0 md:space-x-10 md:w-auto md:p-0 rounded-b-lg shadow-lg"
         >
-          <a href="#" class="hover:text-green-400 transition relative group">
+          <a href="#" class="hover:text-green-500 transition relative group font-semibold text-lg">
             Home
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
           <a
             href="#skills"
-            class="hover:text-green-400 transition relative group"
+            class="hover:text-green-500 transition relative group font-semibold text-lg"
           >
             Skills
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
           <a
             href="#projects"
-            class="hover:text-green-400 transition relative group"
+            class="hover:text-green-500 transition relative group font-semibold text-lg"
           >
             Projects
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
           <a
             href="#bugbounty"
-            class="hover:text-green-400 transition relative group"
+            class="hover:text-green-500 transition relative group font-semibold text-lg"
           >
             Bug Bounty
             <span
-              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-400 transition-all duration-300 group-hover:w-full"
+              class="absolute -bottom-1 left-0 w-0 h-0.5 bg-green-500 transition-all duration-300 group-hover:w-full"
             ></span>
           </a>
         </div>
       </div>
     </nav>
 
-    <div
-      class="grid grid-cols-1 md:grid-cols-2 p-5 m-5 mx-auto gap-8 max-w-screen-xl"
+    <main
+      class="grid grid-cols-1 md:grid-cols-2 p-8 m-8 mx-auto gap-10 max-w-screen-xl bg-gray-900 bg-opacity-60 rounded-xl shadow-xl"
     >
-      <div>
+      <div class="flex justify-center items-center">
         <img
           src="image/me.png"
           alt="Zahid Azmy"
-          class="object-cover w-full rounded-lg"
+          class="object-cover w-64 h-64 rounded-full border-4 border-green-500 shadow-lg"
         />
       </div>
 
-      <div class="flex flex-col">
-        <h2 class="text-2xl font-bold mb-2">MUHAMMAD ZAHID AZMY</h2>
+      <div class="flex flex-col text-gray-100">
+        <h1 class="text-4xl font-extrabold mb-4 tracking-wide text-green-400">MUHAMMAD ZAHID AZMY</h1>
 
-        <p class="mb-1"><i class="fa-solid fa-phone mr-2"></i>+6282351437523</p>
-        <p class="mb-1"><i class="fa-brands fa-github mr-2"></i>r0xa</p>
-        <p class="mb-4">
-          <i class="fa-solid fa-envelope mr-2"></i>zahidazmy13@gmail.com
-        </p>
-
-        <hr class="border-t border-gray-500 w-full mb-5" />
-
-        <h2 class="font-bold text-xl mb-1">Profile Summary</h2>
-        <p class="mb-5">
-          Seorang fresh graduate Teknik Komputer Jaringan dengan ketertarikan
-          dalam Cyber Security. Memiliki kemampuan kuat dalam Linux & Problem
-          Solving.
-        </p>
-
-        <h2 class="font-bold text-xl mb-1">Education</h2>
-        <p>SD Muhammadiyah 1 Tenggarong</p>
-        <p>MTS PPKP Ribathul Khail</p>
-        <p class="mb-5">SMK Negeri 1 Tenggarong</p>
-
-        <h2 id="projects" class="font-bold text-xl mb-2">Projects</h2>
-        <ul class="list-checklist list-inside mb-5">
-          <li>NFC Reader with keyboard emulator</li>
-          <li>AI Assistant with LLAMA Model</li>
-          <li>Attendance Data Scrapper</li>
-          <li>Whatsapp Notification System Using Laravel</li>
-        </ul>
-
-        <h2 id="skills" class="font-bold text-xl mb-2">Skills</h2>
-        <div class="mb-5">
-          <div class="mb-4">
-            <h3 class="font-semibold mb-1">Server</h3>
-            <ul class="list-none list-inside ml-4">
-              <li>
-                <p class="fa-brands fa-linux mr-2"></p>
-                Linux
-              </li>
-              <li>
-                <p class="fa-brands fa-windows mr-2" style="color: aqua"></p>
-                Windows
-              </li>
-            </ul>
-          </div>
-          <div class="mb-4">
-            <h3 class="font-semibold mb-1">Networking</h3>
-            <ul class="list-none list-inside ml-4">
-              <li>Mikrotik</li>
-              <li>Cisco</li>
-            </ul>
-          </div>
-          <div class="mb-4">
-            <h3 class="font-semibold mb-1">Programming</h3>
-            <ul class="list-none list-inside ml-4">
-              <li>
-                <p class="fa-brands fa-python mr-2" style="color: #ffd43b"></p>
-                Python
-              </li>
-              <li>
-                <p class="fa-brands fa-linux mr-2"></p>
-                Bash
-              </li>
-              <li>
-                <p class="fa-brands fa-microsoft mr-2" style="color: aqua"></p>
-                Powershell
-              </li>
-              <li>
-                <p class="fa-brands fa-windows mr-2" style="color: aqua"></p>
-                Batch
-              </li>
-              <li>
-                <p
-                  class="fa-brands fa-php mr-2"
-                  style="color: rgb(153, 0, 255)"
-                ></p>
-                PHP
-              </li>
-              <li>
-                <p class="fa-brands fa-laravel mr-2" style="color: red"></p>
-                Laravel
-              </li>
-              <li>
-                <p class="fa-brands fa-js mr-2" style="color: #ffd43b"></p>
-                Javascript
-              </li>
-            </ul>
-          </div>
+        <div class="mb-6 space-y-2 text-lg">
+          <p><i class="fa-solid fa-phone mr-3 text-green-400"></i>+6282351437523</p>
+          <p><i class="fa-brands fa-github mr-3 text-green-400"></i>r0xa</p>
+          <p><i class="fa-solid fa-envelope mr-3 text-green-400"></i>zahidazmy13@gmail.com</p>
         </div>
 
-        <h2 class="font-bold text-xl mb-2">Certifications</h2>
-        <ul class="list-none list-inside ml-4 mb-4">
-          <li>MTCNA</li>
-          <li>1st Place, Provincial Cyber Security LKS</li>
-          <li>3rd Place, Provincial IT Network System Administration LKS</li>
-        </ul>
+        <hr class="border-t border-green-600 w-full mb-6" />
 
-        <h2 class="font-bold text-xl mb-2">Bug Bounty</h2>
-        <ul class="list-none list-inside ml-4 mb-4">
-          <li>Bug Discovery Award - Banyuwangi</li>
-          <li>HOF - Kutai Kartanegara Regency</li>
-        </ul>
+        <section>
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Profile Summary</h2>
+          <p class="mb-6 text-gray-300 leading-relaxed">
+            Seorang fresh graduate Teknik Komputer Jaringan dengan ketertarikan dalam Cyber Security. Memiliki kemampuan kuat dalam Linux & Problem Solving.
+          </p>
+        </section>
+
+        <section>
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Education</h2>
+          <ul class="list-disc list-inside text-gray-300 mb-6 space-y-1">
+            <li>SD Muhammadiyah 1 Tenggarong</li>
+            <li>MTS PPKP Ribathul Khail</li>
+            <li>SMK Negeri 1 Tenggarong</li>
+          </ul>
+        </section>
+
+        <section id="projects">
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Projects</h2>
+          <ul class="list-checklist list-inside mb-6 text-gray-300 space-y-1">
+            <li>NFC Reader with keyboard emulator</li>
+            <li>AI Assistant with LLAMA Model</li>
+            <li>Attendance Data Scrapper</li>
+            <li>Whatsapp Notification System Using Laravel</li>
+          </ul>
+        </section>
+
+        <section id="skills">
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Skills</h2>
+          <div class="mb-6 space-y-6 text-gray-300">
+            <div>
+              <h3 class="font-semibold mb-2 text-green-400">Server</h3>
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Linux <i class="fa-brands fa-linux ml-2"></i></li>
+                <li>Windows <i class="fa-brands fa-windows ml-2" style="color: aqua"></i></li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2 text-green-400">Networking</h3>
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Mikrotik</li>
+                <li>Cisco</li>
+              </ul>
+            </div>
+            <div>
+              <h3 class="font-semibold mb-2 text-green-400">Programming</h3>
+              <ul class="list-disc list-inside ml-6 space-y-1">
+                <li>Python <i class="fa-brands fa-python ml-2" style="color: #ffd43b"></i></li>
+                <li>Bash <i class="fa-brands fa-linux ml-2"></i></li>
+                <li>Powershell <i class="fa-brands fa-microsoft ml-2" style="color: aqua"></i></li>
+                <li>Batch <i class="fa-brands fa-windows ml-2" style="color: aqua"></i></li>
+                <li>PHP <i class="fa-brands fa-php ml-2" style="color: rgb(153, 0, 255)"></i></li>
+                <li>Laravel <i class="fa-brands fa-laravel ml-2" style="color: red"></i></li>
+                <li>Javascript <i class="fa-brands fa-js ml-2" style="color: #ffd43b"></i></li>
+              </ul>
+            </div>
+          </div>
+        </section>
+
+        <section>
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Certifications</h2>
+          <ul class="list-disc list-inside ml-6 mb-6 text-gray-300 space-y-1">
+            <li>MTCNA</li>
+            <li>1st Place, Provincial Cyber Security LKS</li>
+            <li>3rd Place, Provincial IT Network System Administration LKS</li>
+          </ul>
+        </section>
+
+        <section id="bugbounty">
+          <h2 class="font-bold text-2xl mb-3 border-b-2 border-green-500 pb-1">Bug Bounty</h2>
+          <ul class="list-disc list-inside ml-6 mb-6 text-gray-300 space-y-1">
+            <li>Bug Discovery Award - Banyuwangi</li>
+            <li>HOF - Kutai Kartanegara Regency</li>
+          </ul>
+        </section>
       </div>
-    </div>
+    </main>
+
+    <footer class="text-center text-gray-400 text-sm py-6 border-t border-gray-700 mt-10">
+      &copy; 2024 Muhammad Zahid Azmy. All rights reserved.
+    </footer>
 
     <script>
       const menuBtn = document.getElementById("menu-btn");
